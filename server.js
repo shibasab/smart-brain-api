@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
       }
     })
     .catch(err => {
-      status(400).json('error getting user');
+      res.status(400).json('error getting user');
     });
 });
 
