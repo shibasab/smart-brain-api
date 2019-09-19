@@ -19,22 +19,11 @@ const db = knex({
 
 const app = express();
 
-app.use(bodyParser.json());
 app.use(cors());
+app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-  db.select('*')
-    .from('users')
-    .then(user => {
-      if (user.length) {
-        res.json(user);
-      } else {
-        res.status(400).json('Not found');
-      }
-    })
-    .catch(err => {
-      res.status(400).json('error getting user');
-    });
+  res.json('it is working');
 });
 
 app.post('/signin', (req, res) => {
