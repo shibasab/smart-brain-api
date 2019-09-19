@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const cors = require('cors');
 const knex = require('knex');
-const saltRounds = 10;
 
 const register = require('./controllers/register');
 const signin = require('./controllers/signin');

@@ -1,3 +1,5 @@
+const saltRounds = 10;
+
 const handleSignin = (req, res, db, bcrypt) => {
   const { email, password } = req.body;
   if (!email || !password) {
